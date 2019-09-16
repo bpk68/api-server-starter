@@ -44,7 +44,7 @@ const userRoutes = (app, fs) => {
             const newUserId = Object.keys(data).length + 1;
 
             // add the new user
-            data[newUserId] = JSON.parse(req.body.data);
+            data[newUserId.toString()] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {
                 res.status(200).send('new user added');
@@ -61,7 +61,7 @@ const userRoutes = (app, fs) => {
 
             // add the new user
             const userId = req.params["id"];
-            data[userId] = JSON.parse(req.body.data);
+            data[userId] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {
                 res.status(200).send(`users id:${userId} updated`);
