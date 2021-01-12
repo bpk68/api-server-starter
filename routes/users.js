@@ -41,7 +41,9 @@ const userRoutes = (app, fs) => {
     app.post('/users', (req, res) => {
 
         readFile(data => {
-            const newUserId = Object.keys(data).length + 1;
+            // Note: this isn't ideal for production use. 
+            // ideally, use something like a UUID or other GUID for a unique ID value
+            const newUserId = Date.now().toString();
 
             // add the new user
             data[newUserId.toString()] = req.body;
