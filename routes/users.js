@@ -78,7 +78,7 @@ const userRoutes = (app, fs) => {
 
         readFile(data => {
 
-            // add the new user
+            // delete the user
             const userId = req.params["id"];
             delete data[userId];
 
