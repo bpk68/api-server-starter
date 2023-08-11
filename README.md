@@ -1,6 +1,10 @@
 # Node API Server Starter Kit
 This starter kit contains everything you'll need to create your very own Node-based API server, using Express JS and configured to serve JSON files for data. 
 
+## [UPDATE]!! Check out the new improved version
+
+If you're looking for a more up-to-date version of this API starter kit then please [check out the new repo here](https://github.com/bpk68/api-server-starter-ts). I've improved everything from the ground up using a newer version of Express, included TypeScript and even used some fancy Node path aliases for your typing pleasure 😄. 
+
 ## Why an API server that serves JSON files?
 
 Driven, as always, by the need to solve a problem I had on how to create a dummy API server that could return various bits of data in a realistic fashion (thus, removing the need to hard code everything), I went down the path of creating a dual project: one for the main React app I was using, with an attached API server using Express JS (i.e. this project).
